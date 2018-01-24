@@ -3,16 +3,19 @@ import './Input.css';
 
 
 class Input extends Component{
-  constructor(){
-    super();
-    
+  constructor(props){
+    super(props);
+  }
+  pargraphsHandler = (e) => {
+    //finished here
+    console.log(e.target.value);
   }
 
-  render(){
+  render(props){
     return(
       <div className="Input-wrapper">
         <label htmlFor="paragraphs-number">Paragraphs: </label>
-        <input type="number" name="paragraphs-number" id=""/>
+        <input type="number" name="paragraphs-number" id="" onChange={this.pargraphsHandler}/>
         <label htmlFor="html-select">Include HTML: </label>
         <select name="html-select" id="">
           <option value="no">no</option>

@@ -10,7 +10,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">React Lorem Ipsum Generator</h1>
         </header>
-        <main class="App-body">
+        <main className="App-body">
           <Input/>
           <Output/>
         </main>  
