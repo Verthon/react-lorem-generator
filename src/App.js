@@ -5,14 +5,21 @@ import Output from './Output/Output.js';
 import Select from './Select/Select';
 
 class App extends Component {
-  pargraphsHandler = (e) => {
-    //finished here
-    console.log(e.target.value);
-    this.setState = ({
-      pargraphValue: e.target.value
-    });
+  state = {
+    pValue: 1,
+    html: false
   }
 
+  pargraphsHandler = (event) => {
+    this.setState ({
+      pValue: event.target.value
+    });
+    console.log(event.target.value);
+  }
+  htmlTagsHandler = (event) =>{
+    console.log(`${event.target.value}`)
+  }
+  
   render() {
     return (
       <div className="App">
@@ -20,9 +27,9 @@ class App extends Component {
           <h1 className="App-title">React Lorem Ipsum Generator</h1>
         </header>
         <main className="App-body">
-          <Input onChange={this.pargraphsHandler}/>
+          <Input changed={this.pargraphsHandler}/>
+          <Select changed={this.htmlTagsHandler}/>
           <Output/>
-          <Select/>
         </main>  
       </div>
     );
