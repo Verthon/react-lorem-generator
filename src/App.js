@@ -9,42 +9,41 @@ class App extends Component {
   state = {
     pValue: 5,
     html: 'text',
-    items: []
-  }
-
-  //Checking the user input of how many paragraphs
-  paragraphsHandler = (event) => {
-    this.setState ({
-      pValue: event.target.value
-    });
-  }
-
-  //Checking the html tags
-  htmlTagsHandler = (event) =>{
-    console.log(`${event.target.value}`)
-    let userInput = event.target.value;
-    if(userInput === 'yes'){
-      this.setState({
-        html: 'html',
-      })
-    }
+    content: ''
   }
 
   componentDidMount(){
     axios.get(`https://baconipsum.com/api/?type=all-meat&paras=${this.state.pValue}&format=${this.state.html}`)
     .then(response => {
       this.setState({
-        items: response.data
+        content: response.data,       
       })
-      console.log(response.data);
     })
     .catch(error => {
       console.log(error);
     });
   }
+
+  //Checking the user input of how many paragraphs
+  paragraphsHandler = (event) => {
+    //Most important callback it allows to change state after any of users changes of the input
+    console.log(this.state.pValue);
+    this.setState ({pValue: event.target.value}, this.componentDidMount);
+  }
+
+  //Checking the html tags
+  htmlTagsHandler = (event) =>{
+    let userInput = event.target.value;
+    if(userInput === 'yes'){
+      this.setState({html: 'html'}, this.componentDidMount)
+    }else{
+      this.setState({html: 'text'}, this.componentDidMount)
+    }
+  }
   
   render() {
-    let items = this.state.items;
+    
+    console.log(this.state.content);
     return (
       <div className="App">
         <header className="App-header">
@@ -53,7 +52,7 @@ class App extends Component {
         <main className="App-body">
           <Input changed={this.paragraphsHandler}/>
           <Select changed={this.htmlTagsHandler}/>
-          <Output>{items}</Output>
+          <Output value={this.state.content}/>
         </main>  
       </div>
     );

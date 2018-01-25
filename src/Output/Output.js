@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Output.css';
   
-const Output = () => {
-
+class Output extends Component {
+  state = {
+    value: ''
+  }
+  render(props){
     return(
       <article id="generated-text" className="App-output">
-        
+        {this.props.value}
       </article>
     );
-
   }
+}
 
 export default Output;
