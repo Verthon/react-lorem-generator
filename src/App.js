@@ -27,7 +27,6 @@ class App extends Component {
   //Checking the user input of how many paragraphs
   paragraphsHandler = (event) => {
     //Most important callback it allows to change state after any of users changes of the input
-    console.log(this.state.pValue);
     this.setState ({pValue: event.target.value}, this.componentDidMount);
   }
 
@@ -42,15 +41,13 @@ class App extends Component {
   }
   
   render() {
-    
-    console.log(this.state.content);
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">React Lorem Ipsum Generator</h1>
         </header>
         <main className="App-body">
-          <Input changed={this.paragraphsHandler}/>
+          <Input value={this.props.value}changed={this.paragraphsHandler}/>
           <Select changed={this.htmlTagsHandler}/>
           <Output value={this.state.content}/>
         </main>  

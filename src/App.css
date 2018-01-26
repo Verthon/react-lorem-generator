@@ -1,1 +1,40 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato';
+  color: #1a1a1a;
+  font-size: 10px;
+}
+.App-header{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.App-header .App-title{
+  font-size: 3em;
+  padding: 0;
+  text-align: center;
+}
+.App-body{
+  margin: 3em;
+}
+.Input-wrapper{
+  margin: 2em;
+}
+.Input-wrapper, .Select-wrapper{
+  font-size: 1.4em;
+  font-weight: bold;
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 15em;
+}
 
+.App-output{
+  display: flex;
+  font-size: 1.6em;
+  text-align: justify;
+  margin: 2em;
+  border: 0.1em solid #d3d3d3;
+  background-color: #eeeeee;
+  padding: 2em;
+}
