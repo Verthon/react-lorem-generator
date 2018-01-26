@@ -7,5 +7,5 @@ Very basic react app, which generates Lorem Ipsum without reloading the page.
 
 ## Todo
 
-- Button wit 'copy to clipboard option'
+- Button with 'copy to clipboard option'
 - CSS

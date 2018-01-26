@@ -11,30 +11,36 @@
   align-items: center; 
 }
 .App-header .App-title{
-  font-size: 3em;
-  padding: 0;
+  font-size: 3.5em;
+  padding: 0 0 1em 0;
   text-align: center;
 }
 .App-body{
-  margin: 3em;
+  margin: 0 10em 10em 10em;
 }
-.Input-wrapper{
-  margin: 2em;
+.Input-wrapper input[type="number"], .Select-wrapper select{
+  padding: 0.5em;
+  border: 0.1em solid #ddd;
+  border-radius: 0.5em;
+  margin: 0 0 2em 0;
+  font-family: 'Lato';
+  color: #2b2b2b;
 }
+
+input[type="number"]:focus, .Select-wrapper select{outline:0;}
 .Input-wrapper, .Select-wrapper{
   font-size: 1.4em;
   font-weight: bold;
   display: inline-flex;
   flex-direction: column;
-  max-width: 15em;
 }
-
 .App-output{
   display: flex;
   font-size: 1.6em;
   text-align: justify;
-  margin: 2em;
   border: 0.1em solid #d3d3d3;
-  background-color: #eeeeee;
-  padding: 2em;
+  background-color: #f2f3f4;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  line-height: 1.4;
 }
