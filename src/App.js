@@ -9,7 +9,9 @@ class App extends Component {
   state = {
     pValue: 5,
     html: 'text',
-    content: ''
+    content: '',
+    value: '',
+    copied: false
   }
 
   componentDidMount(){
@@ -46,9 +48,14 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">React Lorem Ipsum Generator</h1>
         </header>
-        <main className="App-body">
+        <nav className="App-nav">
           <Input value={this.props.value}changed={this.paragraphsHandler}/>
           <Select changed={this.htmlTagsHandler}/>
+          <div className="button-wrapper">
+            <button className="copy-btn">copy to clipboard</button>
+          </div>
+        </nav>
+        <main className="App-body">
           <Output value={this.state.content}/>
         </main>  
       </div>

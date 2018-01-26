@@ -15,8 +15,10 @@
   padding: 0 0 1em 0;
   text-align: center;
 }
-.App-body{
-  margin: 0 10em 10em 10em;
+.App-nav{
+  margin: 0 10em 0 10em;
+  height: 10em;
+  display: flex;
 }
 .Input-wrapper input[type="number"], .Select-wrapper select{
   padding: 0.5em;
@@ -34,6 +36,24 @@ input[type="number"]:focus, .Select-wrapper select{outline:0;}
   display: inline-flex;
   flex-direction: column;
 }
+.button-wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+.copy-btn{
+  border: 0.1em solid #ddd;
+  background: transparent;
+  padding: 0.7em;
+  font-size: 1.5em;
+  color: #232323;
+  font-weight: bold;
+  border-radius: 0.5em;
+  height: 40%;
+}
+.App-body{
+  margin: 0 10em 10em 10em;
+}
+
 .App-output{
   display: flex;
   font-size: 1.6em;
@@ -44,3 +64,5 @@ input[type="number"]:focus, .Select-wrapper select{outline:0;}
   border-radius: 0.5em;
   line-height: 1.4;
 }
+
+
