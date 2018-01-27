@@ -22,7 +22,7 @@
 }
 .Input-wrapper input[type="number"], .Select-wrapper select{
   padding: 0.5em;
-  border: 0.1em solid #ddd;
+  border: 0.1em solid #bfbfbf;
   border-radius: 0.5em;
   margin: 0 0 2em 0;
   font-family: 'Lato';
@@ -39,9 +39,10 @@ input[type="number"]:focus, .Select-wrapper select{outline:0;}
 .button-wrapper{
   display: flex;
   justify-content: flex-end;
+  flex-grow: 1;
 }
 .copy-btn{
-  border: 0.1em solid #ddd;
+  border: 0.1em solid #c6c6c6;
   background: transparent;
   padding: 0.7em;
   font-size: 1.5em;
@@ -49,6 +50,12 @@ input[type="number"]:focus, .Select-wrapper select{outline:0;}
   font-weight: bold;
   border-radius: 0.5em;
   height: 40%;
+}
+.copy-btn:hover{
+  cursor: pointer;
+}
+.copy-btn:focus{
+  outline: none;
 }
 .App-body{
   margin: 0 10em 10em 10em;
@@ -58,11 +65,126 @@ input[type="number"]:focus, .Select-wrapper select{outline:0;}
   display: flex;
   font-size: 1.6em;
   text-align: justify;
-  border: 0.1em solid #d3d3d3;
-  background-color: #f2f3f4;
+  border: 0.1em solid #c6c6c6;
+  background-color: #f2f2f2;
   padding: 1.5em;
   border-radius: 0.5em;
   line-height: 1.4;
 }
 
+/*Big Tablet */
 
+@media all and (max-width: 1024px) and (min-width: 769px) {
+  .App-nav{
+    margin: 0 2em 0 2em;
+  } 
+  .App-body{
+    margin: 0 2em 2em 2em;
+  }
+  .App-output{
+    font-size: 2.5em;
+  }
+  .Input-wrapper input[type="number"], .Select-wrapper select {
+    padding: 1em;
+    border: 0.1em solid #bfbfbf;
+    border-radius: 0.5em;
+    margin: 0 0 2em 0;
+    font-family: 'Lato';
+    color: #2b2b2b;
+  }
+  
+  .Input-wrapper, .Select-wrapper{
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .copy-btn {
+    border: 0.1em solid #c6c6c6;
+    background: transparent;
+    padding: 0.7em;
+    font-size: 2em;
+    color: #232323;
+    font-weight: bold;
+    border-radius: 0.5em;
+    height: 60%;
+  }
+}
+
+/*Regular/small Tablet */
+@media all and (max-width: 768px) and(min-width: 415px){
+  .App-nav{
+    margin: 0 2em 0 2em;
+  } 
+  .App-body{
+    margin: 0 2em 2em 2em;
+  }
+  .App-output{
+    font-size: 2.5em;
+  }
+  .Input-wrapper input[type="number"], .Select-wrapper select {
+    padding: 1em;
+    border: 0.1em solid #bfbfbf;
+    border-radius: 0.5em;
+    margin: 0 0 2em 0;
+    font-family: 'Lato';
+    color: #2b2b2b;
+  }
+  
+  .Input-wrapper, .Select-wrapper{
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .copy-btn {
+    border: 0.1em solid #c6c6c6;
+    background: transparent;
+    padding: 0.7em;
+    font-size: 2em;
+    color: #232323;
+    font-weight: bold;
+    border-radius: 0.5em;
+    height: 60%;
+  }
+}
+/* Smartphones */
+@media all and (max-width: 768px){
+  .App-nav{
+    margin: 0 0.5em 0 0.5em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+  .App-body{
+    margin: 0 0.5em 0 0.5em;
+  }
+  .App-output{
+    font-size: 1.5em;
+  }
+  .Input-wrapper input[type="number"], .Select-wrapper select {
+    padding: 0.1em;
+    border: 0.05em solid #bfbfbf;
+    border-radius: 0.5em;
+    margin: 0 0 0.2em 0;
+    font-family: 'Lato';
+    color: #2b2b2b;
+  }
+  
+  .Input-wrapper, .Select-wrapper{
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .copy-btn {
+    border: 0.05em solid #c6c6c6;
+    background: transparent;
+    padding: 0.6em;
+    font-size: 1.2em;
+    color: #232323;
+    font-weight: bold;
+    border-radius: 0.5em;
+  }
+}
