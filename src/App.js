@@ -4,6 +4,7 @@ import Input from './Input/Input.js';
 import Output from './Output/Output.js';
 import Select from './Select/Select';
 import axios from 'axios'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 class App extends Component {
   state = {
@@ -49,11 +50,14 @@ class App extends Component {
           <h1 className="App-title">React Lorem Ipsum Generator</h1>
         </header>
         <nav className="App-nav">
-          <Input value={this.props.value}changed={this.paragraphsHandler}/>
+          <Input value={this.props.value} changed={this.paragraphsHandler}/>
           <Select changed={this.htmlTagsHandler}/>
+          <CopyToClipboard text={this.state.content}
+          onCopy={() => this.setState({copied: true})}>
           <div className="button-wrapper">
             <button className="copy-btn">copy to clipboard</button>
           </div>
+          </CopyToClipboard>          
         </nav>
         <main className="App-body">
           <Output value={this.state.content}/>
