@@ -1,5 +1,7 @@
 # React Lorem Ipsum Generator
 
+https://verthon.github.io/react-lorem-generator/
+
 Very basic react app, which generates Lorem Ipsum without reloading the page.
 
 - User can choose number of paragraphs,
