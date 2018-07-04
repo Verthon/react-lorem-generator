@@ -15,7 +15,8 @@ Very basic react app, which generates Lorem Ipsum without reloading the page.
 
 ## Installation
 
-$ git clone https://github.com/Verthon/react-lorem-generator.git
-$ npm install
-$ npm start
+``` git clone https://github.com/Verthon/react-lorem-generator.git
+ npm install
+ npm start 
+ ```
  
