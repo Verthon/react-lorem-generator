@@ -1,6 +1,11 @@
 # React Lorem Ipsum Generator
 
-https://verthon.github.io/react-lorem-generator/
+live version: https://verthon.github.io/react-lorem-generator/
+
+## Technologies used
+
+- React.js
+- CSS(flexbox)
 
 Very basic react app, which generates Lorem Ipsum without reloading the page.
 
